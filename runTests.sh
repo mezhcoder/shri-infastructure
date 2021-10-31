@@ -19,7 +19,9 @@ TASK_ID=$(
     }' | jq -r '.[].key'
     )
 echo "TASK_ID: ${TASK_ID}"
-
+echo "Sleep 3 sec."
+sleep 3
+echo "Go!"
 RESP_COMMENT=$(
     curl -s -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
     -H "Authorization: OAuth ${OAUTH}" \
