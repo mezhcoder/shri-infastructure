@@ -20,14 +20,12 @@ TASK_ID=$(
     )
 echo "TASK_ID: ${TASK_ID}"
 
-#Send comment
-#Send ticket
 RESPONSE=$(
     curl -s -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
     -H "Authorization: OAuth ${OAUTH}" \
     -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
-    -d '{
+    --data-raw '{
         "text": "'${OUTPUT_JEST}'"
     }'
 )
