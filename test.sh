@@ -6,3 +6,4 @@ curl -s -X GET https://api.tracker.yandex.net/v2/issues \
 -H "Authorization: OAuth ${OAuth}" \
 -H "X-Org-Id: ${XOrgID}"
 )
+
