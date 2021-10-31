@@ -9,7 +9,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
 -H "Content-Type: application/json" \
 -H "Authorization: OAuth ${OAUTH}" \
 -H "X-Org-Id: ${XORGID}" \
---d '{
+-d '{
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
         "type": "task",
