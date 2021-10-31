@@ -19,10 +19,10 @@ jobs:
       - name: ⬇ ️Create ticket
         run: sudo sh ./createTicket.sh
         env:
-          OAuth: ${{ secrets.OAUTH }}
-          OrgID: ${{ secrets.XORGID }}
+          OAUTH: ${{ secrets.OAUTH }}
+          XORGID: ${{ secrets.XORGID }}
       - name: ⬇ Start jest-tests
         run: sudo sh ./runTests.sh
         env:
-          OAuth: ${{ secrets.OAUTH }}
-          OrgID: ${{ secrets.XORGID }}
+          OAUTH: ${{ secrets.OAUTH }}
+          XORGID: ${{ secrets.XORGID }}
