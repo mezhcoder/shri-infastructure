@@ -26,7 +26,7 @@ echo ${TASK_ID}
 RESPONSE=$(
     curl -so dev/null -w '%{http_code}' -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
     -H "Authorization: OAuth ${OAuth}" \
-    -H "X-Org-Id: ${XOrgID}" \
+    -H "X-Org-Id: ${OrgID}" \
     -H "Content-Type: application/json" \
     --data '{
         "text": "'${OUTPUT_JEST}'"
