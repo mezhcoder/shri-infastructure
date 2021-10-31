@@ -6,7 +6,7 @@ OUTPUT_JEST=$(npm run test 2>&1 | tr -s "\n" " ")
 
 RELEASE_TAG=$(git describe --tags HEAD)
 UNIQUE="https://github.com/mezhcoder/shri-infastructure/releases/tag/${RELEASE_TAG}"
-
+echo "Get unique: '${UNIQUE}'"
 TASK_ID=$(
     curl -s -X POST "https://api.tracker.yandex.net/v2/issues/_search" \
     -H "Authorization: OAuth ${OAUTH}" \
