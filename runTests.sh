@@ -19,8 +19,8 @@ TASK_ID=$(
     }' | jq -r '.[].key'
     )
 echo "TASK_ID: ${TASK_ID}"
-echo "Sleep 3 sec."
-sleep 3
+echo "Sleep 1 sec."
+sleep 1
 echo "Go!"
 RESP_COMMENT=$(
     curl -so dev/null -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
@@ -28,7 +28,7 @@ RESP_COMMENT=$(
     -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
     -d '{
-        "text":"'${OUTPUT_JEST}'"
+        "text": "'"${OUTPUT_JEST}"'"
     }'
 )
-echo "RESP_COMMENT: ${RESP_COMMENT}"
+echo "Done."
