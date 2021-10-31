@@ -5,8 +5,8 @@ UNIQUE="https://github.com/mezhcoder/shri-infastructure/releases/tag/${RELEASE_T
 
 TASK_ID=$(
     curl -s -X POST "https://api.tracker.yandex.net/v2/issues/_search" \
-    -H "Authorization: OAuth ${OAuth}" \
-    -H "X-Org-Id: ${OrgID}" \
+    -H "Authorization: OAuth ${OAUTH}" \
+    -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
     -d '{
     "filter": {
