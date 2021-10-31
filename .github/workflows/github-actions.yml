@@ -17,12 +17,12 @@ jobs:
           node-version: "14"
       - run: npm ci
       - name: ⬇ ️Create ticket
-        run: sudo sh ./createTicket.sh
+        run: sh ./createTicket.sh
         env:
           OAUTH: ${{ secrets.OAUTH }}
           XORGID: ${{ secrets.XORGID }}
       - name: ⬇ Start jest-tests
-        run: sudo sh ./runTests.sh
+        run: sh ./runTests.sh
         env:
           OAUTH: ${{ secrets.OAUTH }}
           XORGID: ${{ secrets.XORGID }}
