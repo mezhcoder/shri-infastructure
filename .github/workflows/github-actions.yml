@@ -15,6 +15,7 @@ jobs:
           node-version: "14"
       - name: 🦄 Install package jq
         run: sudo apt-get install jq
+      - run: npm ci
       - name: ⬇ ️Create ticket
         run: sh ./createTicket.sh
         env:
