@@ -1,9 +1,8 @@
-#!/bin/bash
+# !/bin/bash
 
 #2>&1 - перевод потока 2 в 1
 # tr -s - замена \n на " " для приятного восприятия + обход ограничения лимита
 OUTPUT_JEST=$(npm run test 2>&1 | tr -s "\n" " ")
-#OUTPUT_JEST=$(npm run test 2>&1)
 
 RELEASE_TAG=$(git describe --tags HEAD)
 UNIQUE="https://github.com/mezhcoder/shri-infastructure/releases/tag/${RELEASE_TAG}"
