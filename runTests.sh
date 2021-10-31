@@ -18,7 +18,7 @@ TASK_ID=$(
       }
     }' | jq -r '.[].key'
     )
-echo ${TASK_ID}
+echo "TASK_ID: ${TASK_ID}"
 
 #Send comment
 #Send ticket
@@ -31,4 +31,4 @@ RESPONSE=$(
         "text": "'${OUTPUT_JEST}'"
     }'
 )
-echo $RESPONSE
+echo "RESPONSE: ${RESPONSE}"
