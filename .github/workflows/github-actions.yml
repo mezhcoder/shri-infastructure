@@ -20,3 +20,8 @@ jobs:
         env:
           OAuth: ${{ secrets.OAUTH }}
           OrgId: ${{ secrets.ORGID }}
+      - name: ⬇ Start jest-tests
+        run: sh ./runTests.sh
+        env:
+          OAuth: ${{ secrets.OAUTH }}
+          OrgId: ${{ secrets.ORGID }}
