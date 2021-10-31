@@ -1,14 +1,14 @@
 # !/bin/bash
 
 RELEASE_TAG=$(git describe --tags HEAD)
-
+echo $RELEASE_TAG
 RESPONSE=$(
 curl -s -X POST https://api.tracker.yandex.net/v2/issues \
 --write-out '%{http_code}' \
 --output errorBashLogs.txt \
 -H "Content-Type: application/json" \
 -H "Authorization: OAuth ${OAuth}" \
--H "X-Org-Id: ${XOrgID}" \
+-H "X-Org-Id: ${XOrgId}" \
 --data '{
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
