@@ -27,7 +27,7 @@ RESPONSE=$(
     -H "Authorization: OAuth ${OAUTH}" \
     -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
-    --data '{
+    -d '{
         "text": "'${OUTPUT_JEST}'"
     }'
 )
