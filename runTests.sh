@@ -23,7 +23,7 @@ echo "TASK_ID: ${TASK_ID}"
 #Send comment
 #Send ticket
 RESPONSE=$(
-    curl -so dev/null -w '%{http_code}' -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
+    curl -s -X POST "https://api.tracker.yandex.net/v2/issues/${TASK_ID}/comments" \
     -H "Authorization: OAuth ${OAUTH}" \
     -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
