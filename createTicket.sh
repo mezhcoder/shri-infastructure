@@ -1,8 +1,7 @@
 # !/bin/bash
 
-echo "start"
+
 RELEASE_TAG=$(git describe --tags HEAD)
-echo $RELEASE_TAG
 RESPONSE=$(
 curl -s -X POST https://api.tracker.yandex.net/v2/issues \
 --write-out '%{http_code}' \
@@ -10,7 +9,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
 -H "Content-Type: application/json" \
 -H "Authorization: OAuth ${OAUTH}" \
 -H "X-Org-Id: ${XORGID}" \
---data '{
+--d '{
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
         "type": "task",
@@ -18,6 +17,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
         "unique": "https://github.com/mezhcoder/shri-infastructure/releases/tag/'${RELEASE_TAG}'"
     }'
 )
+echo $RESPONSE
 
 if [ ${RESPONSE} = 201 ]; then
   echo "Ticket created."
