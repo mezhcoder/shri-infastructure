@@ -8,7 +8,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
 --output errorBashLogs.txt \
 -H "Content-Type: application/json" \
 -H "Authorization: OAuth ${OAuth}" \
--H "X-Org-Id: ${XOrgID}" \
+-H "X-Org-Id: ${OrgID}" \
 --data '{
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
