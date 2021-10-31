@@ -1,0 +1,22 @@
+name: Push ticket
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  Create-SHRITicket:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: 🦄 Install package jq
+        run: apt-get install jq
+      - name: ⬇ ️Create ticket
+        run: sh ./createTicket.sh
+        env:
+          OAuth: ${{ secrets.OAUTH }}
+          OrgId: ${{ secrets.ORGID }}
