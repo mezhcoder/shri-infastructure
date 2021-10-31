@@ -27,7 +27,7 @@ jobs:
           OAUTH: ${{ secrets.OAUTH }}
           XORGID: ${{ secrets.XORGID }}
       - name: Build Docker
-        run: sh ./scripts/buildDocker.sh
+        run: sh ./buildDocker.sh
         env:
           OAUTH: ${{ secrets.OAUTH }}
           XORGID: ${{ secrets.XORGID }}
