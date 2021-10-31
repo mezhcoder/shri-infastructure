@@ -28,7 +28,7 @@ RESP_COMMENT=$(
     -H "X-Org-Id: ${XORGID}" \
     -H "Content-Type: application/json" \
     -d '{
-        "text":"1234"
+        "text":"'${OUTPUT_JEST}'"
     }'
 )
 echo "RESP_COMMENT: ${RESP_COMMENT}"
