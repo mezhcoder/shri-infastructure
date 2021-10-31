@@ -1,6 +1,5 @@
 # !/bin/bash
 
-
 RELEASE_TAG=$(git describe --tags HEAD)
 RESPONSE=$(
 curl -s -X POST https://api.tracker.yandex.net/v2/issues \
@@ -17,7 +16,6 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
         "unique": "https://github.com/mezhcoder/shri-infastructure/releases/tag/'${RELEASE_TAG}'"
     }'
 )
-echo $RESPONSE
 
 if [ ${RESPONSE} = 201 ]; then
   echo "Ticket created."
