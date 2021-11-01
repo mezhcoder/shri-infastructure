@@ -22,5 +22,5 @@
 👩‍🚀 Мои контакты: https://t.me/zhcoder
 
 <h3>Screenshots</h3>
-<img src="https://user-images.githubusercontent.com/49750349/139685512-1d4f3f44-efac-4d10-885a-1ac572077191.png" width="60%" height="20%">
-<img src="https://user-images.githubusercontent.com/49750349/139685646-ff3060e7-388b-4989-af8a-218fc9128d29.png" width="60%" height="20%">
+<img src="https://user-images.githubusercontent.com/49750349/139685512-1d4f3f44-efac-4d10-885a-1ac572077191.png" width="70%" height="30%">
+<img src="https://user-images.githubusercontent.com/49750349/139685646-ff3060e7-388b-4989-af8a-218fc9128d29.png" width="70%" height="30%">
