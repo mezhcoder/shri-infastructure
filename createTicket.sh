@@ -1,8 +1,5 @@
 # !/bin/bash
 
-OAUTH="AQAAAAAevcYPAAd48b8jymR3U0hciWYgjMQev9I"
-XORGID="6461097"
-
 RELEASE_TAG=$(git describe --tags HEAD)
 #Получить ранний тэг релиза, отсортировать + выбрать последний тэг
 EARLY_RELEASE=$(git tag -l | sort -r | head -n2 | tail -1)
