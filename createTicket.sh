@@ -1,7 +1,11 @@
 # !/bin/bash
 
+OAUTH="AQAAAAAevcYPAAd48b8jymR3U0hciWYgjMQev9I"
+XORGID="6461097"
+
 RELEASE_TAG=$(git describe --tags HEAD)
-EARLY_RELEASE=$(git tag -l | sort -r | tail -1 | head -n2)
+#Получить ранний тэг релиза, отсортировать + выбрать последний тэг
+EARLY_RELEASE=$(git tag -l | sort -r | head -n2 | tail -1)
 LAST_RELEASE=$(git tag -l | sort -r | head -n1)
 
 AUTHOR=$(git log --pretty=format:"%aN" | head -n1)
@@ -18,7 +22,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
         "type": "task",
-        "description": "AUTHOR: '"${AUTHOR}"'\n CHANGELOG: '"${CHANGELOG}"'",
+        "description": "Author: '"${AUTHOR}"'\nChangelog: '"${CHANGELOG}"'",
         "unique": "https://github.com/mezhcoder/shri-infastructure/releases/tag/'${RELEASE_TAG}'"
     }'
 )
