@@ -18,7 +18,7 @@ curl -s -X POST https://api.tracker.yandex.net/v2/issues \
         "queue":"TMP",
         "summary": "'"${RELEASE_TAG}"'",
         "type": "task",
-        "description": "AUTHOR: '${AUTHOR}'\n CHANGELOG: '${CHANGELOG}'",
+        "description": "AUTHOR: '"${AUTHOR}"'\n CHANGELOG: '"${CHANGELOG}"'",
         "unique": "https://github.com/mezhcoder/shri-infastructure/releases/tag/'${RELEASE_TAG}'"
     }'
 )
