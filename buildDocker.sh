@@ -2,7 +2,8 @@
 RELEASE_TAG=$(git describe --tags HEAD)
 
 echo "Start build docker"
-docker build -t helloapp:${RELEASE_TAG} .
+docker build -t app:${RELEASE_TAG} .
+docker run -it app:${RELEASE_TAG}
 
 echo "Start createTicket.sh"
 sh createTicket.sh
